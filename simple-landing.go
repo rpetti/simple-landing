@@ -22,5 +22,5 @@ func main() {
 
 	http.HandleFunc("/", handler)
 
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", *port), nil))
 }
